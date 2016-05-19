@@ -29,11 +29,8 @@
             color: white;
         }
 
-        .image-invisible {
-            display: none;
-        }
 
-        a.poulet {
+        .poulet {
             color: white;
         }
 
@@ -43,6 +40,11 @@
 
         .poulet.bleu {
             background-color: blue;
+        }
+        .poulet:hover  {
+         color:white;
+         text-decoration:none;
+         background-color:blue;
         }
 
         .image-tourne {
@@ -56,8 +58,21 @@
             -o-animation: rotating 2s linear infinite;
             animation: rotating 2s linear infinite;
         }
+        .list-group-item.bleu {
+        background-color:blue;
+        color:white;
+        }
+          .list-group-item.vert {
+        background-color:green;
+        color:white;
+        }
+            .list-group-item.rouge {
 
-        @-webkit-keyframes rotating /* Safari and Chrome */ {
+        color:white;
+        }
+
+
+        @-webkit-keyframes rotating { /* Safari and Chrome */ 
             from {
                 -ms-transform: rotate(0deg);
                 -moz-transform: rotate(0deg);
@@ -96,7 +111,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Le site de référence des poulets en plastique</h1>
+             <h1><a class="poulet">Le site de référence des poulets en plastique</a></h1>
         </div>
         <div class="col-md-3">
             <div class="list-group">
@@ -152,6 +167,7 @@
         totalSecondes++;
         time.innerText = totalSecondes;
     },1000);
+
 </script>
 
 </body>
